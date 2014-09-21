@@ -1,16 +1,21 @@
 apply plugin: 'android'
 
 android {
-    compileSdkVersion 17
-    buildToolsVersion = 18
+    compileSdkVersion 19
+    buildToolsVersion '19.1'
+
+
+    defaultConfig {
+        minSdkVersion 11
+        targetSdkVersion 19
+        versionCode 1
+        versionName "1.0"
+    }
 
     sourceSets {
         main {
             assets.srcDirs       = ['assets']
             res.srcDirs          = ['res']
-            aidl.srcDirs         = ['src']
-            resources.srcDirs    = ['src']
-            renderscript.srcDirs = ['src']
             java.srcDirs         = ['src']
             manifest.srcFile 'AndroidManifest.xml'
         }
